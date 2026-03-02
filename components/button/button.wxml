@@ -1,0 +1,10 @@
+<view class="button-container">
+  <button
+    class="{{ getButtonClass() }}"
+    style="height: {{ height }}; border-radius: 4px; font-size: 16px; font-weight: 500; border: 1px solid {{ buttonStyle.borderColor }}; background-color: {{ buttonStyle.backgroundColor }}; color: {{ buttonStyle.color }}; width: {{ width ? width : (fullWidth ? '100%' : 'auto') }}; {{ disabled ? 'opacity: 0.5;' : 'opacity: 1;' }}"
+    disabled="{{ disabled }}"
+    bindtap="handleTap"
+  >
+    {{ text }}
+  </button>
+</view>

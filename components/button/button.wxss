@@ -1,0 +1,54 @@
+/* 按钮容器 */
+.button-container {
+  display: inline-block;
+}
+
+/* 按钮基础样式 */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 主要按钮 */
+.button--primary {
+  background-color: #007AFF;
+  color: #FFFFFF;
+  border: none;
+}
+
+/* 次要按钮 */
+.button--secondary {
+  background-color: #FFFFFF;
+  color: #007AFF;
+  border: 1px solid #007AFF;
+}
+
+/* 危险按钮 */
+.button--danger {
+  background-color: #FF3B30;
+  color: #FFFFFF;
+  border: none;
+}
+
+/* 禁用状态 */
+.button--disabled {
+  background-color: #E5E5E5 !important;
+  color: #999999 !important;
+  opacity: 0.5 !important;
+}
+
+/* 全宽按钮 */
+.button--full-width {
+  width: 100%;
+}
+
+/* 按钮点击态 */
+.button:active:not(.button--disabled) {
+  opacity: 0.8;
+}
