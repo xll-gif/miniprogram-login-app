@@ -1,0 +1,22 @@
+<!--首页-->
+<view class="container">
+  <!-- Logo -->
+  <view class="logo">
+    <view class="logo-circle"></view>
+    <text class="logo-text">H</text>
+  </view>
+
+  <!-- 标题 -->
+  <text class="title">首页</text>
+
+  <!-- 欢迎信息 -->
+  <text class="welcome">欢迎回来，{{userId || '未知用户'}}</text>
+
+  <!-- 登出按钮 -->
+  <button class="logout-button" bindtap="onLogout">退出登录</button>
+
+  <!-- 功能列表 -->
+  <view class="features">
+    <text class="features-text">更多功能开发中...</text>
+  </view>
+</view>
