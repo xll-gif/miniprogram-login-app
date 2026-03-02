@@ -1,0 +1,28 @@
+<view class="splash-page">
+  <!-- Logo -->
+  <view class="logo-container">
+    <view class="logo-circle">
+      <text class="logo-text">L</text>
+    </view>
+  </view>
+
+  <!-- 品牌名称 -->
+  <view class="brand-name {{ isLoaded ? 'loaded' : '' }}">LoginApp</view>
+
+  <!-- 加载动画 -->
+  <view class="loading-container">
+    <!-- 进度条 -->
+    <view class="progress-bar-bg">
+      <view class="progress-bar-fill" style="width: {{ progress * 200 }}rpx;"></view>
+    </view>
+
+    <!-- 加载文字 -->
+    <view class="loading-text">正在加载...</view>
+  </view>
+
+  <!-- 版本信息 -->
+  <view class="version-info">
+    <view class="version-text">Version 1.0.0</view>
+    <view class="copyright">© 2026 Multi-Platform App</view>
+  </view>
+</view>

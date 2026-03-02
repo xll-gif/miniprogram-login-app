@@ -1,0 +1,104 @@
+/* 启动页面容器 */
+.splash-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  gap: 48rpx;
+}
+
+/* Logo 容器 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo 圆形 */
+.logo-circle {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #007AFF, #5AC8FA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+}
+
+/* Logo 文字 */
+.logo-text {
+  font-size: 96rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+/* 品牌名称 */
+.brand-name {
+  font-size: 56rpx;
+  font-weight: bold;
+  color: #333333;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.brand-name.loaded {
+  opacity: 1;
+}
+
+/* 加载容器 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24rpx;
+}
+
+/* 进度条背景 */
+.progress-bar-bg {
+  width: 400rpx;
+  height: 8rpx;
+  background-color: #E5E5E5;
+  border-radius: 4rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 进度条填充 */
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007AFF, #5AC8FA);
+  border-radius: 4rpx;
+  transition: width 0.1s ease-in-out;
+}
+
+/* 加载文字 */
+.loading-text {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+/* 版本信息 */
+.version-info {
+  position: absolute;
+  bottom: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+}
+
+/* 版本文字 */
+.version-text {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+/* 版权信息 */
+.copyright {
+  font-size: 20rpx;
+  color: #CCCCCC;
+}
