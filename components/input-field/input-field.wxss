@@ -1,0 +1,54 @@
+/* 输入框容器 */
+.input-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 输入框标题 */
+.input-field-title {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 400;
+}
+
+/* 输入框包装器 */
+.input-field-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 错误图标 */
+.input-field-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: #FF3B30;
+  flex-shrink: 0;
+}
+
+/* 输入框基础样式 */
+.input-field {
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* 错误状态 */
+.input-field--error {
+  border-color: #FF3B30 !important;
+}
+
+/* 禁用状态 */
+.input-field--disabled {
+  opacity: 0.5;
+}
+
+/* 错误提示 */
+.input-field-error {
+  font-size: 12px;
+  color: #FF3B30;
+  padding-left: 24px;
+}

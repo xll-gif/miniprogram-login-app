@@ -1,0 +1,31 @@
+<view class="input-field-container">
+  <!-- 标题 -->
+  <view wx:if="{{ title }}" class="input-field-title">{{ title }}</view>
+  
+  <!-- 输入框容器 -->
+  <view class="input-field-wrapper">
+    <!-- 错误图标 -->
+    <view wx:if="{{ title && isError }}" class="input-field-icon">⚠</view>
+    
+    <!-- 输入框 -->
+    <input
+      class="{{ getInputClass() }}"
+      type="{{ inputType }}"
+      placeholder="{{ placeholder }}"
+      value="{{ value }}"
+      placeholder-style="color: #999999;"
+      disabled="{{ disabled }}"
+      maxlength="{{ maxlength }}"
+      style="height: {{ height }}; border-radius: 4px; font-size: 16px; color: #333333; background-color: #FFFFFF; border: 1px solid {{ borderColor }}; padding: 0 12px; {{ disabled ? 'opacity: 0.5;' : 'opacity: 1;' }}; width: {{ width ? width : (fullWidth ? '100%' : 'auto') }};"
+      bindinput="handleInput"
+      bindfocus="handleFocus"
+      bindblur="handleBlur"
+      bindconfirm="handleConfirm"
+    />
+  </view>
+  
+  <!-- 错误提示 -->
+  <view wx:if="{{ isError && errorMessage }}" class="input-field-error">
+    {{ errorMessage }}
+  </view>
+</view>
