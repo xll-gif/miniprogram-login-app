@@ -1,155 +1,56 @@
-/* 登录页面样式 */
+/* login.wxss */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40rpx;
+  justify-content: center;
   min-height: 100vh;
-  background-color: #FFFFFF;
+  padding: 24px;
+  background-color: #ffffff;
 }
 
-/* Logo */
 .logo {
-  position: relative;
-  width: 160rpx;
-  height: 160rpx;
-  margin-bottom: 32rpx;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 48px;
 }
 
-.logo-circle {
-  width: 160rpx;
-  height: 160rpx;
-  background: linear-gradient(45deg, #007AFF, #5AC8FA);
-  border-radius: 50%;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
-}
-
-.logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 80rpx;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-/* 标题 */
 .title {
-  font-size: 48rpx;
+  font-size: 24px;
   font-weight: bold;
-  color: #333333;
-  margin-bottom: 32rpx;
+  margin-bottom: 32px;
 }
 
-/* 表单 */
-.form {
+.input-group {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 32rpx;
+  margin-bottom: 16px;
 }
 
-/* 密码显示/隐藏切换 */
-.password-toggle {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+.input {
+  width: 300px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.toggle-text {
-  font-size: 28rpx;
-  color: #007AFF;
+.error {
+  font-size: 14px;
+  color: #ff0000;
+  margin-bottom: 16px;
 }
 
-/* 登录按钮 */
-.login-button {
-  width: 100%;
-  height: 88rpx;
-  background-color: #007AFF;
-  color: #FFFFFF;
-  font-size: 32rpx;
-  font-weight: 500;
-  border-radius: 8rpx;
+.login-btn {
+  width: 200px;
+  height: 40px;
+  background-color: #1890ff;
+  color: #ffffff;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.login-button.disabled {
-  background-color: #E5E5E5;
-  color: #999999;
-  opacity: 0.5;
-}
-
-/* 错误提示 */
-.error-message {
-  width: 100%;
-  padding: 24rpx;
-  background-color: #FFF5F5;
-  border: 1rpx solid #FF3B30;
-  border-radius: 8rpx;
-  color: #FF3B30;
-  font-size: 28rpx;
-  text-align: center;
-}
-
-/* 辅助链接 */
-.links {
-  margin-top: auto;
-  margin-bottom: 40rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24rpx;
-}
-
-.link-button {
-  width: 400rpx;
-  height: 72rpx;
-  background-color: #FFFFFF;
-  color: #007AFF;
-  font-size: 28rpx;
-  border: 1rpx solid #007AFF;
-  border-radius: 8rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.register-link {
-  display: flex;
-  gap: 8rpx;
-  font-size: 28rpx;
-  color: #666666;
-}
-
-.link-text {
-  color: #007AFF;
-  font-size: 28rpx;
-}
-
-/* 测试账号提示 */
-.test-accounts {
-  width: 100%;
-  padding: 32rpx;
-  background-color: #F5F5F5;
-  border-radius: 16rpx;
-  margin-top: 40rpx;
-  display: flex;
-  flex-direction: column;
-  gap: 16rpx;
-}
-
-.test-title {
-  font-size: 24rpx;
-  font-weight: bold;
-  color: #666666;
-}
-
-.test-text {
-  font-size: 24rpx;
-  color: #999999;
+.login-btn[disabled] {
+  background-color: #cccccc;
 }

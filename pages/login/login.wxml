@@ -1,70 +1,20 @@
-<!--登录页面-->
+<!--login.wxml-->
 <view class="container">
-  <!-- Logo -->
-  <view class="logo">
-    <view class="logo-circle"></view>
-    <text class="logo-text">L</text>
+  <image class="logo" src="https://cdn.weipaitang.com/sky/resourceMan/tupianfv/image/20260303/594f688d556e4a78bd597508c9ebd709-W140H140" mode="aspectFit"></image>
+
+  <text class="title">欢迎登录</text>
+
+  <view class="input-group">
+    <input class="input" placeholder="请输入用户名" bindinput="onUsernameInput" />
   </view>
 
-  <!-- 标题 -->
-  <text class="title">登录</text>
-
-  <!-- 表单 -->
-  <view class="form">
-    <!-- 邮箱输入框 -->
-    <input-field
-      title="邮箱"
-      placeholder="请输入邮箱地址"
-      value="{{email}}"
-      isError="{{emailError}}"
-      errorMessage="{{emailError}}"
-      bind:onChange="onEmailChange"
-    />
-
-    <!-- 密码输入框 -->
-    <input-field
-      title="密码"
-      placeholder="请输入密码"
-      value="{{password}}"
-      isPassword="{{!showPassword}}"
-      isError="{{passwordError}}"
-      errorMessage="{{passwordError}}"
-      bind:onChange="onPasswordChange"
-    />
-
-    <!-- 密码显示/隐藏切换 -->
-    <view class="password-toggle">
-      <text class="toggle-text" bindtap="onTogglePassword">{{showPassword ? '隐藏密码' : '显示密码'}}</text>
-    </view>
-
-    <!-- 登录按钮 -->
-    <button
-      class="login-button {{isFormValid && !isLoading ? '' : 'disabled'}}"
-      disabled="{{!isFormValid || isLoading}}"
-      bindtap="onLogin"
-    >
-      {{isLoading ? '登录中...' : '登录'}}
-    </button>
-
-    <!-- 提交错误提示 -->
-    <view class="error-message" wx:if="{{submitError}}">
-      {{submitError}}
-    </view>
+  <view class="input-group">
+    <input class="input" type="password" placeholder="请输入密码" bindinput="onPasswordInput" />
   </view>
 
-  <!-- 辅助链接 -->
-  <view class="links">
-    <button class="link-button" bindtap="onForgotPassword">忘记密码？</button>
-    <view class="register-link">
-      <text>还没有账号？</text>
-      <text class="link-text" bindtap="onRegister">立即注册</text>
-    </view>
-  </view>
+  <text class="error" wx:if="{{errorMessage}}">{{errorMessage}}</text>
 
-  <!-- 测试账号提示 -->
-  <view class="test-accounts">
-    <text class="test-title">测试账号：</text>
-    <text class="test-text">邮箱: test@example.com / 密码: password123</text>
-    <text class="test-text">邮箱: admin@example.com / 密码: admin123</text>
-  </view>
+  <button class="login-btn" bindtap="onLogin" disabled="{{isLoading}}">
+    {{isLoading ? '登录中...' : '登录'}}
+  </button>
 </view>

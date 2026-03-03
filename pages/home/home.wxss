@@ -1,80 +1,31 @@
-/* 首页样式 */
+/* home.wxss */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40rpx;
-  min-height: 100vh;
-  background-color: #FFFFFF;
-}
-
-/* Logo */
-.logo {
-  position: relative;
-  width: 160rpx;
-  height: 160rpx;
-  margin-bottom: 32rpx;
-}
-
-.logo-circle {
-  width: 160rpx;
-  height: 160rpx;
-  background: linear-gradient(45deg, #007AFF, #5AC8FA);
-  border-radius: 50%;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
-}
-
-.logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 80rpx;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-/* 标题 */
-.title {
-  font-size: 48rpx;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 16rpx;
-}
-
-/* 欢迎信息 */
-.welcome {
-  font-size: 32rpx;
-  color: #666666;
-  margin-bottom: 32rpx;
-}
-
-/* 登出按钮 */
-.logout-button {
-  width: 600rpx;
-  height: 88rpx;
-  background-color: #007AFF;
-  color: #FFFFFF;
-  font-size: 32rpx;
-  font-weight: 500;
-  border-radius: 8rpx;
-  border: none;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
 }
 
-/* 功能列表 */
-.features {
-  margin-top: auto;
-  margin-bottom: 40rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32rpx;
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-.features-text {
-  font-size: 28rpx;
+.subtitle {
+  font-size: 18px;
   color: #999999;
+  margin-bottom: 48px;
+}
+
+.logout-btn {
+  width: 200px;
+  height: 40px;
+  background-color: #cccccc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
 }
