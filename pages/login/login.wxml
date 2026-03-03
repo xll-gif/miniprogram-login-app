@@ -1,32 +1,35 @@
 <!--login.wxml-->
-<view class="container">
-  <!-- Logo -->
-  <image class="logo" src="https://cdn.weipaitang.com/sky/resourceMan/tupianfv/image/20260303/594f688d556e4a78bd597508c9ebd709-W140H140" mode="aspectFit"></image>
+<view class="page-container">
+  <view class="content-container">
+    <!-- Logo -->
+    <image class="logo" src="https://cdn.weipaitang.com/sky/resourceMan/tupianfv/image/20260303/594f688d556e4a78bd597508c9ebd709-W140H140" mode="aspectFit"></image>
 
-  <!-- 标题 -->
-  <text class="title">欢迎登录</text>
+    <!-- 标题 -->
+    <text class="title">欢迎登录</text>
 
-  <!-- 输入框容器 -->
-  <view class="input-container">
-    <!-- 用户名输入 -->
-    <view class="input-item">
-      <image class="input-icon" src="/assets/icon-user.png" mode="aspectFit"></image>
-      <input class="input" placeholder="请输入用户名" bindinput="onUsernameInput" placeholder-class="input-placeholder" />
+    <!-- 输入框容器 -->
+    <view class="input-container">
+      <!-- 用户名输入 -->
+      <view class="input-item">
+        <image class="input-icon" src="/assets/icon-user.png" mode="aspectFit"></image>
+        <input class="input" placeholder="请输入用户名" bindinput="onUsernameInput" placeholder-class="input-placeholder" />
+      </view>
+
+      <!-- 密码输入 -->
+      <view class="input-item">
+        <image class="input-icon" src="/assets/icon-lock.png" mode="aspectFit"></image>
+        <input class="input" type="password" placeholder="请输入密码" bindinput="onPasswordInput" placeholder-class="input-placeholder" />
+      </view>
     </view>
 
-    <!-- 密码输入 -->
-    <view class="input-item">
-      <image class="input-icon" src="/assets/icon-lock.png" mode="aspectFit"></image>
-      <input class="input" type="password" placeholder="请输入密码" bindinput="onPasswordInput" placeholder-class="input-placeholder" />
-    </view>
+    <!-- 错误提示 -->
+    <text class="error" wx:if="{{errorMessage}}">{{errorMessage}}</text>
+    <text class="error-placeholder" wx:else></text>
+
+    <!-- 登录按钮 -->
+    <button class="login-btn" bindtap="onLogin" disabled="{{isLoading}}" hover-class="btn-hover">
+      <view wx:if="{{isLoading}}" class="loading"></view>
+      <text>{{isLoading ? '登录中...' : '登录'}}</text>
+    </button>
   </view>
-
-  <!-- 错误提示 -->
-  <text class="error" wx:if="{{errorMessage}}">{{errorMessage}}</text>
-
-  <!-- 登录按钮 -->
-  <button class="login-btn" bindtap="onLogin" disabled="{{isLoading}}" hover-class="btn-hover">
-    <view wx:if="{{isLoading}}" class="loading"></view>
-    <text>{{isLoading ? '登录中...' : '登录'}}</text>
-  </button>
 </view>
