@@ -1,6 +1,10 @@
 <!--home.wxml-->
 <view class="container">
+  <!-- 成功图标 -->
+  <image class="success-icon" src="/assets/icon-success.png" mode="aspectFit"></image>
+
   <text class="title">欢迎回来！</text>
   <text class="subtitle">您已成功登录</text>
-  <button class="logout-btn" bindtap="onLogout">退出登录</button>
+  
+  <button class="logout-btn" bindtap="onLogout" hover-class="btn-hover">退出登录</button>
 </view>

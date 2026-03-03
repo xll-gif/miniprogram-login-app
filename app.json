@@ -4,6 +4,11 @@
     "pages/home/home"
   ],
   "window": {
-    "navigationBarTitleText": "登录应用"
-  }
+    "navigationBarTitleText": "登录应用",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
